@@ -1,50 +1,28 @@
 ![Logo](img/ucol-logo.jpg)
 
-# Práctica 2: Programación de una calculadora de la Regla-Trapezoidal
+# Ejercicio 1: Trabajo con Vectores - Coladera de Eratostenes
 
 - FACULTAD DE TELEMATICA
 - INGENIERÍA EN SOFTWARE
 - “3ºG”
-- MÉTODOS NUMÉRICOS
-  - CATEDRATICO: CORTÉS LUGO HUGO
-  - AGUIRRE ROMERO RAMÓN ALEJANDRO
+- ESTRUCTURA DE DATOS
+- CATEDRATICO: RAMIREZ GONZALEZ HUMBERTO
+- AGUIRRE ROMERO RAMÓN ALEJANDRO
 
-## Explicación del Programa
+## OBJETIVO
 
-![Ejemplo](img/pantalla-principal.png)
-Como observación se tiene que en dado caso que no se vaya a llenar toda la fórmula no es necesario colocar cero ya que de manera automática si no cuenta con un número dentro entonces regresará un cero lo cual al multiplicarse por la variable inevitablemente dará cero.
-además si se busca tener una mayor formalidad en la fórmula en la variable se le puede cambiar a la opción null.
+Resolver el siguiente problema para encontrar los números primos menores a 1000 usando el método de la coladera de Eratostenes. Importante seguir el método que se presenta aquí y no aplicar uno propio.
 
-> Poniendo en practica:
+> ENTREGA: LUNES 23 DE AGOSTO DEL 2021
 
-- Al abrir el index se podrá observar como tenemos en este caso la forma de una integral en la cual se debe ingresar los datos de A,B y N porque si no son ingresados causará que el programa te niegue proseguir con sus cálculos hasta que complete la información (Le aconsejo probar al no colocar uno de esos datos para que pueda observar el mensaje que entrega al usuario).
+## EXPLICACIÓN DEL PROCESO
 
-- Ahora después de haber ingresado los valores de A, B, y N, se tendrá la oportunidad de completar los demás recuadros y elegir si las x serán activadas o serán nulas.
+> 4.29 (LA COLADERA DE ERATÓSTENES)
 
-- Al haber completado los datos se presiona al botón `Registrar` para que realice los cálculos o al botón `Limpear Campos` para eliminar todo lo registrado.
+Unenteri primo es cualquier entero que es divisible sólo entre él mismo y entre 1. La coladera de Eratóstenes es un método para encontrar números primos. Opera como sigue:
 
-## Pruebas
+- Cree un arreglo con todos los elementos inicializados a 1 (verdadero). Los elementos del arreglo que tengan subíndices primos permanecerán en 1. Los demás elementos del arreglo en algún momento se establecerán a cero.
 
-> Ejercicio 1
+- Comenzando por el subíndice 2 (el subíndice 1 debe ser primo), cada vez que se encuentre un elemento del arreglo que sea 1, haga un cicllo por el resto del arreglo y establezca a cero todos los elementos cuyos subíndices sea un múltiplo de dicho subíndice. Para el subíndice 2, todos los elementos por encima de 2 que sea múltiplos de 2 se establecerán a cero (los subíndices 4, 6, 8, 10, etc.); en el caso del subíndice 3, todos los elementos por encima de 3 que sean múltiplos de 3 se establecerán a cero (los subíndices 6, 9, 12, 15, etc.); y así sucesivamente.
 
-![Ejemplo](img/Formula-1.png)
-
-- Se prueba los datos de la anterior imagen en el programa y se podra observar como es que si entrega los mismos resultados
-
-![Ejemplo](img/Ejercicio-1-Resuelto.png)
-
-> Ejercicio 2
-
-![Ejemplo](img/Formula-2.png)
-
-- Se prueba los datos de la anterior imagen en el programa y se podra observar como es que si entrega los mismos resultados
-
-![Ejemplo](img/Ejercicio-2-Resuelto.png)
-
-> Ejercicio 3
-
-![Ejemplo](img/Formula-3.png)
-
-- Se prueba los datos de la anterior imagen en el programa y se podra observar como es que si entrega los mismos resultados
-
-![Ejemplo](img/Ejercicio-3-Resuelto.png)
+Terminando este proceso, los elementos del arreglo que aún estén establecidos a 1 indicarán que el subíndice es un número primo, así que podrán imprimirse. Escriba un programa con un arreglo de 1000 elementos que determine e imprima los números primos entre 1 y 999. Ignore el elemento 0 del arreglo.
