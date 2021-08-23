@@ -144,39 +144,6 @@ export default class Eratosthenes{
     
     }
     
-    prueba(){
-        var array = [];
-        var tmpArray = []; // for containing unintentionally deleted elements like 2,3,5,7,...
-        var upperLimit = Math.sqrt(this.numFinal);
-
-        // Eratosthenes algorithm to find all primes under n
-
-        // Make an array from 2 to (n - 1)
-        //used as a base array to delete composite number from
-        for(var i = 2; i < this.numFinal; i++){
-            array.push(i);
-        }
-
-        // Remove multiples of primes starting from 2, 3, 5,...
-        for(var i = array[0]; i < 1000; i = array[0]){  
-            Multiples: 
-            for(var j = i, k = i; j < this.numFinal; j += i){
-                
-                var index = array.indexOf(j);
-                //console.log(j)
-                if(index === -1)
-                    continue Multiples;
-                else
-                    array.splice(index,1);
-            }
-            tmpArray.push(k);
-        }
- 
-        array.unshift(tmpArray);
-        return array;
-       
-    }
-    
 }
 
 
